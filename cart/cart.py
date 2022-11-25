@@ -20,9 +20,9 @@ class Cart(object):
         """
         Перебираем товары в корзине и получаем товары из базы данных.
         """
-        product_ids = self.cart.keys()
+        product_id = self.cart.keys()
         # получаем товары и добавляем их в корзину
-        products = Product.objects.filter(id__in=product_ids)
+        products = Product.objects.filter(id__in=product_id)
 
         cart = self.cart.copy()
         for product in products:
