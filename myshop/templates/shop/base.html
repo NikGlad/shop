@@ -8,7 +8,9 @@
 </head>
 <body>
 <div id="header">
-<a href="/" class="logo">Мой магазин</a>
+<a href="/" class="logo">Мёд с полей</a>
+<a href="/" class="logo">Контакты</a>
+<a href="/" class="logo">О пользе мёда</a>
 </div>
 <div id="subheader">
     <div class="cart">
@@ -16,7 +18,7 @@
         {% if cart|length > 0 %}
         В корзине
         <a href="{% url 'cart:cart_detail' %}">
-            {{ total_items }} шт {{ cart.get_total_price }}
+             товаров на сумму {{ cart.get_total_price }}
         </a>
         {% else %}
         Корзина пустая
